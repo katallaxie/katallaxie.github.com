@@ -1,17 +1,13 @@
 // initial state
 const init = {
-  messages: [
-    'I ❤️ VueJS',
-    'I ❤️ TypeStyle',
-    'I ❤️ one file',
-  ]
+  name: 'Sebastian Döll.',
+  job: 'Software Engineer at Axel Springer.'
 }
 
 // getters
 const getters = {
-  message: (state) => {
-    return state.messages[Math.floor(Math.random() * state.messages.length)]
-  }
+  name: state => state.name,
+  job: state => state.job
 }
 
 // actions

@@ -18,6 +18,7 @@ document.body.appendChild(root)
 // // remove loading
 const loading = document.getElementsByClassName('loading')
 document.body.removeChild(loading[0])
+document.body.classList.remove('critical')
 
 // bootstrap application
 const bootstrap = new Vue({

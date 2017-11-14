@@ -2,9 +2,13 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 import { Home } from '../home'
 import { wrap } from './style'
+import { Header } from '../header'
+import { Getter } from 'vuex-class'
 
 @Component
 export class App extends Vue {
+  @Getter('name') public name
+  @Getter('job') public job
 
   public props = {
     show: false
@@ -17,11 +21,12 @@ export class App extends Vue {
   public render(h) {
     if (this.props.show) {
       return (
-        <div class={wrap}>
-          <transition name='fade'>
+        <transition name='fade'>
+          <div class={wrap}>
+            <Header name={this.name} job={this.job} />
             <Home />
-          </transition>
-        </div>
+          </div>
+        </transition>
       )
     }
   }

@@ -1,0 +1,57 @@
+// colors
+@import './lib/colors';
+
+// bootstrap
+@import '~bootstrap/scss/bootstrap-reboot.scss';
+@import '~bootstrap/scss/bootstrap-grid.scss';
+
+$spinner-color: $font-color;
+$spinner-size: 2.333rem;
+
+// spinner
+@import './lib/spinner';
+
+html, body {
+  height: 100%;
+  font-family:  Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  min-height: 100%;
+
+  background-color: $bg-color;
+  color: $font-color;
+}
+
+.wf-active {
+  html, body {
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+.critical {
+
+  .loading {
+    display: block;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+
+    .spinner {
+      left: 50%;
+      margin-left: -($spinner-size / 2);
+      margin-top: -($spinner-size / 2);
+      position: absolute;
+      top: 50%;
+    }
+
+  }
+
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}

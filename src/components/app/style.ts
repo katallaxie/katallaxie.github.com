@@ -3,25 +3,28 @@ import { percent } from 'csx'
 import size from '../../style/sizes'
 
 export const wrap = style(
+  {
+    margin: '2.333rem',
+  },
   media(
     { minWidth: size.md },
     {
-      margin: '2rem auto 0',
-      maxWidth: percent(92)
+      margin: '6.333rem auto 0',
+      maxWidth: percent(79)
     }
   ),
   media(
     { minWidth: size.lg },
     {
-      margin: '4rem auto 0',
-      maxWidth: percent(97)
+      margin: '8.3333rem auto 0',
+      maxWidth: percent(77)
     }
   ),
   media(
     { minWidth: size.xl },
     {
-      margin: '6rem auto 0',
-      maxWidth: percent(87)
+      margin: '8.3333rem auto 0',
+      maxWidth: percent(75)
     }
   )
 )

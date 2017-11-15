@@ -9,6 +9,7 @@ import { Getter } from 'vuex-class'
 export class App extends Vue {
   @Getter('name') public name
   @Getter('job') public job
+  @Getter('teaser') public teaser
 
   public props = {
     show: false

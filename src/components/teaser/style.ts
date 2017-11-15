@@ -1,16 +1,14 @@
 import { style, media } from 'typestyle'
-import { rem, viewWidth } from 'csx'
+import { rem } from 'csx'
 import size from '../../style/sizes'
+import { h1 } from '../../style/headings'
 
 export const teaser = style(
   {
     marginTop: rem(1.333),
     marginBottom: rem(2.333),
     $nest: {
-      'h1': {
-        fontSize: viewWidth(9.333),
-        lineHeight: viewWidth(10.333)
-      }
+      'h1': h1.xs
     }
   },
   media(
@@ -26,10 +24,7 @@ export const teaser = style(
       // marginTop: rem(2.333),
       // marginBottom: rem(2.333),
       $nest: {
-        'h1': {
-          fontSize: viewWidth(6.333),
-          lineHeight: viewWidth(7.333)
-        }
+        'h1': h1.lg
       }
     }
   )

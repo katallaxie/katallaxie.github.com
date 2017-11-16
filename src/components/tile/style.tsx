@@ -3,8 +3,10 @@ import { percent, rem, viewWidth } from 'csx'
 import { h1 } from '../../style/headings'
 import size from '../../style/sizes'
 
-export const tile = style(
+export const tileStyle = style(
   {
+    marginTop: rem(1.333),
+    marginBottom: rem(1.333),
     $nest: {
       'h1': {
         width: percent(85),
@@ -18,6 +20,8 @@ export const tile = style(
   media(
     { minWidth: size.lg },
     {
+      marginTop: rem(3.333),
+      marginBottom: rem(3.333),
       $nest: {
         'h1': {
           paddingTop: viewWidth(23.333),
@@ -26,16 +30,4 @@ export const tile = style(
       }
     }
   )
-)
-
-export const twentyPercent = style(
-  {
-    background: 'radial-gradient(at 60% bottom, #6c388e, #38458e)',
-  }
-)
-
-export const openSource = style(
-  {
-    background: 'radial-gradient(at 60% top, #64e2d1, #026469)'
-  }
 )

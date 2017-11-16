@@ -2,112 +2,62 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 import { Getter } from 'vuex-class'
 import { Teaser } from '../teaser'
-import { twentyPercent, openSource, tile } from './style'
+import { Tile } from '../tile'
+import { twentyPercent, openSource, dataCol, styledTable, StyledData } from './style'
+import { classNames } from '../../utils/style'
+import bRow from 'bootstrap-vue/es/components/layout/row'
+import bCol from 'bootstrap-vue/es/components/layout/col'
+import bTable from 'bootstrap-vue/es/components/table/table'
 
 @Component
 export class Home extends Vue {
   @Getter('teaser') public teaser
+  @Getter('experience') public experience
+  @Getter('education') public education
+  @Getter('coding') public coding
+  @Getter('devOps') public devOps
+  @Getter('tech') public tech
 
   public render(h) {
     return (
-      <div class={['container-fluid']}>
+      <div class={classNames('container-fluid')}>
         <Teaser text={this.teaser} />
-        <div class={['row', 'experience']}>
-          <div class={['col']}>
-            <div class={[twentyPercent, tile]}>
-              <h1>Burning for great ideas and solving the last 20%.</h1>
-            </div>
-          </div>
-        </div>
-        <div class={['row']}>
-          <div class={['col-xl-6']}>
+
+        <Tile className={twentyPercent}>
+          <h1>Working on great ideas and solving the last 20%.</h1>
+        </Tile>
+
+        <bRow>
+          <bCol lg='6' xl='6' class={dataCol}>
             <h2>Experience</h2>
-            <table class="table">
-              <tbody>
-                <tr>
-                  <th scope="row">Axel Springer SE<br /><span class="meta">Senior Frontend Developer</span></th>
-                  <td style="float:right">2017&mdash;Present</td>
-                </tr>
-                <tr>
-                  <th scope="row">Axel Springer SE <span class="meta">Senior Frontend Developer</span></th>
-                  <td style="float:right">2017&mdash;Present</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class={['col-xl-6']}>
-            <h2>Experience</h2>
-            <table class="table">
-              <tbody>
-                <tr>
-                  <th scope="row">Axel Springer SE <span class="meta">Senior Frontend Developer</span></th>
-                  <td style="float:right">2017&mdash;Present</td>
-                </tr>
-                <tr>
-                  <th scope="row">Axel Springer SE <span class="meta">Senior Frontend Developer</span></th>
-                  <td style="float:right">2017&mdash;Present</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class={['row']}>
-          <div class={['col']}>
-            <div class={[openSource, tile]}>
-              <h1>Big fan of new and open tech.</h1>
-            </div>
-          </div>
-        </div>
-        <div class={['row']}>
-          <div class="col-lg-6">
-            <div class="row">
-              <div class="col-12 col-sm-6">
-                <h3>Frontend</h3>
-                <div class="row">
-                  <div class="col">JavaScript</div>
-                  <div class="col">TypeScript</div>
-                  <div class="col">CSS</div>
-                  <div class="col">JavaScript</div>
-                  <div class="col">TypeScript</div>
-                  <div class="col">CSS</div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6">
-                <h3>Backend</h3>
-                <div class="row">
-                  <div class="col">JavaScript</div>
-                  <div class="col">TypeScript</div>
-                  <div class="col">CSS</div>
-                  <div class="col">JavaScript</div>
-                  <div class="col">TypeScript</div>
-                  <div class="col">CSS</div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6">
-                <h3>DevOps</h3>
-                <div class="row">
-                  <div class="col">JavaScript</div>
-                  <div class="col">TypeScript</div>
-                  <div class="col">CSS</div>
-                  <div class="col">JavaScript</div>
-                  <div class="col">TypeScript</div>
-                  <div class="col">CSS</div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6">
-                <h3>Backend</h3>
-                <div class="row">
-                  <div class="col">JavaScript</div>
-                  <div class="col">TypeScript</div>
-                  <div class="col">CSS</div>
-                  <div class="col">JavaScript</div>
-                  <div class="col">TypeScript</div>
-                  <div class="col">CSS</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+            <bTable items={this.experience} class={styledTable}>
+            </bTable>
+          </bCol>
+          <bCol lg='5' offset-lg='1' offset-xl='2' class={dataCol}>
+            <h2>Education</h2>
+            <bTable items={this.education} class={styledTable}>
+            </bTable>
+          </bCol>
+        </bRow>
+
+        <Tile className={openSource}>
+          <h1>Big fan of new and open tech.</h1>
+        </Tile>
+
+        <bRow>
+          <bCol sm='6' lg='4' class={dataCol}>
+            <h2>Coding</h2>
+            {this.coding.map(el => (<StyledData>{el}</StyledData>))}
+          </bCol>
+          <bCol sm='6' lg='4' class={dataCol}>
+            <h2>Tech</h2>
+            {this.tech.map(el => (<StyledData>{el}</StyledData>))}
+          </bCol>
+          <bCol sm='6' lg='4' class={dataCol}>
+            <h2>DevOps</h2>
+            {this.devOps.map(el => (<StyledData>{el}</StyledData>))}
+          </bCol>
+        </bRow>
       </div>
     )
   }

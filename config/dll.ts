@@ -4,7 +4,7 @@
 export function polyfills() {
   return [
     'core-js/es6/promise',
-  ];
+  ]
 }
 
 export function vendor() {
@@ -12,9 +12,11 @@ export function vendor() {
     'csx',
     'typestyle',
     'vue-class-component',
+    'vue-styled-components',
     'vue-router',
+    'bootstrap-vue',
     'vue',
     'vuex-class',
     'vuex'
-  ];
+  ]
 }

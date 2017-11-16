@@ -4,6 +4,7 @@ import { Home } from '../home'
 import { wrap } from './style'
 import { Header } from '../header'
 import { Getter } from 'vuex-class'
+import { Footer } from '../footer'
 
 @Component
 export class App extends Vue {
@@ -26,6 +27,7 @@ export class App extends Vue {
           <div class={wrap}>
             <Header name={this.name} job={this.job} />
             <Home />
+            <Footer />
           </div>
         </transition>
       )

@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import { teaser } from './style'
+import bRow from 'bootstrap-vue/es/components/layout/row'
+import bCol from 'bootstrap-vue/es/components/layout/col'
+import { teaserStyle } from './style'
 
 interface IHeaderProps {
   text: string
@@ -13,11 +15,11 @@ export class Teaser extends Vue<IHeaderProps> {
 
   public render(h) {
     return (
-      <div class={[teaser, 'row']}>
-        <div class={['col', 'col-lg-9']}>
+      <bRow class={teaserStyle}>
+        <bCol lg='9'>
           <h1>{this.text}</h1>
-        </div>
-      </div>
+        </bCol>
+      </bRow>
     )
   }
 }

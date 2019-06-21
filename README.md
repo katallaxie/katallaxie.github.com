@@ -1,80 +1,97 @@
-# Vue Preboot
-[![Taylor Swift](https://img.shields.io/badge/secured%20by-taylor%20swift-brightgreen.svg)](https://twitter.com/SwiftOnSecurity)
-[![Volkswagen](https://auchenberg.github.io/volkswagen/volkswargen_ci.svg?v=1)](https://github.com/auchenberg/volkswagen)
-[![Build Status](https://travis-ci.org/katallaxie/vue-preboot.svg?branch=master)](https://travis-ci.org/katallaxie/vue-preboot)
-[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
-[![Greenkeeper badge](https://badges.greenkeeper.io/katallaxie/vue-preboot.svg)](https://greenkeeper.io/)
+<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+<p align="center">
+  <a href="https://www.gatsbyjs.org">
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby's default starter
+</h1>
 
-> An [Vue](https://vuejs.org/) boilerplate, which has a lot of features and is driven by great spirit.
+Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
-# Features
+_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
-> The boilerplate is opinionated, and nudges devs to do certain things
+## 🚀 Quick start
 
-* [Webpack](http://webpack.github.io/) + DLL Support
-* [TypeScript](http://www.typescriptlang.org/)
-* [@types](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=0ahUKEwjgjdrR7u_NAhUQ7GMKHXgpC4EQFggnMAI&url=https%3A%2F%2Fwww.npmjs.com%2F~types&usg=AFQjCNG2PFhwEo88JKo12mrw_4d0w1oNiA&sig2=N69zbO0yN8ET7v4KVCUOKA)
-* [TsLint](http://palantir.github.io/tslint/)
-* [PostCss](https://github.com/postcss/postcss) + [Autoprefixer](https://github.com/postcss/autoprefixer)
-* [Jest](https://facebook.github.io/jest)
-* [Docker](https://docker.io)
-* [Prettier](https://github.com/prettier/prettier)
-* [TypeStyle](https://github.com/typestyle/typestyle)
-* [Vuex](https://github.com/vuejs/vuex)
-* [Vue.js Router](https://github.com/vuejs/vue-router)
-* Offline Support (PWA)
+1.  **Create a Gatsby site.**
 
-## Quick Start
+    Use the Gatsby CLI to create a new site, specifying the default starter.
 
-> We support Node.js `>= 6.9.1`, NPM `>= 3.x` [Yarn](https://yarnpkg.com)
-> If you downgrade to `protractor@4.9.x` you could run the boilerplate in Node `> 4.7.x`
-> We recommend and support [Visual Studio Code](https://code.visualstudio.com/)
-> We recommend to use [NVM](https://github.com/creationix/nvm) to manage your Node.js version and dependencies
-> We highly recommend to use
+    ```sh
+    # create a new Gatsby site using the default starter
+    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    ```
 
-```
-# clone the repo
-# --depth 1 removes all but one .git commit history
-git clone --depth 1 https://github.com/katallaxie/vue-preboot.git
+1.  **Start developing.**
 
-# change to repo folder
-cd vue-preboot
+    Navigate into your new site’s directory and start it up.
 
-# install the repo with npm, or yarn
-npm install
+    ```sh
+    cd my-default-starter/
+    gatsby develop
+    ```
 
-# start the webpack-dev-server
-npm start
+1.  **Open the source code and start editing!**
 
-# if you're in China use cnpm
-# https://github.com/cnpm/cnpm
-```
+    Your site is now running at `http://localhost:8000`!
 
-> You can run `npm run help` to see all available scripts
+    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-Open [http://0.0.0.0:3000](http://0.0.0.0:3000) or [http://localhost:3000](http://localhost:3000) in your favorite Browser.
+    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
-### Build and deploy your great project
+## 🧐 What's inside?
 
-```bash
-# build the prod version of your project
-npm run build:prod
+A quick look at the top-level files and directories you'll see in a Gatsby project.
 
-# build a ready to ship Docker for your project
-npm run build:docker
-```
+    .
+    ├── node_modules
+    ├── src
+    ├── .gitignore
+    ├── .prettierrc
+    ├── gatsby-browser.js
+    ├── gatsby-config.js
+    ├── gatsby-node.js
+    ├── gatsby-ssr.js
+    ├── LICENSE
+    ├── package-lock.json
+    ├── package.json
+    └── README.md
 
-### Testing is import for quality products
+1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
-> We have [Jest](https://facebook.github.io/jest) and [Protractor](http://www.protractortest.org/) in place
+2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
 
-```bash
-# run your unit tests
-npm run tests
+3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
 
-# or develop with unit tests in the loop
-npm run watch:test
-```
+4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
 
-# License
-[MIT](/LICENSE)
+5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+
+6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+
+7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+
+8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+
+9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+
+10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+
+11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+
+12. **`README.md`**: A text file containing useful reference information about your project.
+
+## 🎓 Learning Gatsby
+
+Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+
+- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+
+- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+
+## 💫 Deploy
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+
+<!-- AUTO-GENERATED-CONTENT:END -->
